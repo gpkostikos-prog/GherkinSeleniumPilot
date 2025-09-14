@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 96%; /* #F5F5F5 - Very light gray */
+    --foreground: 210 10% 23%; /* #333A40 - Dark cool gray */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 210 10% 23%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 10% 23%;
+
+    --primary: 216 52% 40%; /* DataNoesis Blue: #305A9A */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 219 37% 70%; /* Lighter DataNoesis Blue/Subtitle color: #A0B0D0 */
+    --secondary-foreground: 216 52% 25%; /* Darker primary blue for text */
+
+    --muted: 210 20% 94%; /* Lighter gray for muted elements #ECEFF1 */
+    --muted-foreground: 210 10% 45%; /* Medium cool gray #6B7280 */
+
+    --accent: 122 40% 55%; /* DataNoesis Green: #60B964 */
+    --accent-foreground: 0 0% 100%; /* White */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 210 20% 88%; /* Light gray border #DDE1E6 */
+    --input: 0 0% 100%; /* White input fields */
+    --ring: 216 52% 60%; /* Lighter shade of primary for focus rings */
+    
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    --radius: 0.5rem;
+
+    /* Sidebar variables - kept for completeness, though not used in this app structure */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 216 25% 12%; /* #181E29 - Very dark desaturated blue */
+    --foreground: 210 15% 90%; /* #E1E3E6 - Light gray */
+
+    --card: 216 25% 16%; /* #202733 - Slightly lighter than background */
+    --card-foreground: 210 15% 90%;
+
+    --popover: 216 25% 10%; /* Even darker for popovers */
+    --popover-foreground: 210 15% 90%;
+
+    --primary: 216 60% 65%; /* Lighter, more vibrant DataNoesis Blue for dark mode #7798D4 */
+    --primary-foreground: 216 50% 15%; /* Very dark blue for text on light primary */
+
+    --secondary: 219 30% 30%; /* Darker muted blue #3D4B64 */
+    --secondary-foreground: 210 15% 80%; /* Light gray for text */
+
+    --muted: 216 20% 22%; /* Dark gray for muted elements #2D3748 */
+    --muted-foreground: 210 15% 60%; /* Medium-light gray #8A93A2 */
+
+    --accent: 122 45% 65%; /* Lighter, more vibrant DataNoesis Green #7CD180 */
+    --accent-foreground: 122 40% 15%; /* Very dark green for text */
+
+    --destructive: 0 70% 50%; /* Adjusted destructive for dark mode */
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 216 20% 25%; /* Dark gray border #333E4D */
+    --input: 216 20% 20%; /* Dark input fields #28303D */
+    --ring: 216 60% 55%; /* Lighter shade of primary dark for focus rings */
+    
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+
+    /* Sidebar variables - dark theme */
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
